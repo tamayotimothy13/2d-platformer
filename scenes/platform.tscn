@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://cgqpg3bl07ghk"]
+
+[ext_resource type="Script" uid="uid://b6sjdp3ep28aj" path="res://scripts/platform.gd" id="1_nlgqw"]
+[ext_resource type="Texture2D" uid="uid://bnfrssg5c4g30" path="res://assets/sprites/platforms_20260817225401.png" id="2_nlgqw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_btfhh"]
+size = Vector2(40, 8)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ch0g0"]
+size = Vector2(36, 1)
+
+[node name="Platform" type="AnimatableBody2D" unique_id=1030781753]
+script = ExtResource("1_nlgqw")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1786150115]
+texture = ExtResource("2_nlgqw")
+region_enabled = true
+region_rect = Rect2(16, 0, 40, 9)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=426493329]
+shape = SubResource("RectangleShape2D_btfhh")
+
+[node name="RespawnTimer" type="Timer" parent="." unique_id=683592695]
+wait_time = 2.0
+one_shot = true
+
+[node name="CrumbleTimer" type="Timer" parent="." unique_id=1506346008]
+wait_time = 0.3
+one_shot = true
+
+[node name="DetectionArea" type="Area2D" parent="." unique_id=1920701439]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DetectionArea" unique_id=1972131899]
+position = Vector2(0, -4.5)
+shape = SubResource("RectangleShape2D_ch0g0")
+
+[connection signal="timeout" from="RespawnTimer" to="." method="_on_respawn_timer_timeout"]
+[connection signal="timeout" from="CrumbleTimer" to="." method="_on_crumble_timer_timeout"]
+[connection signal="body_entered" from="DetectionArea" to="." method="_on_detection_area_body_entered"]

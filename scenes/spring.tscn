@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://c8j40p6x1kf80"]
+
+[ext_resource type="Script" uid="uid://begl73bkla24p" path="res://scripts/spring.gd" id="1_6vrsj"]
+[ext_resource type="Texture2D" uid="uid://rl0pbko6drvo" path="res://assets/sprites/Untitled2_20260817232558.png" id="1_61klm"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lnu2h"]
+size = Vector2(8, 4)
+
+[node name="Spring" type="Area2D" unique_id=404395385]
+script = ExtResource("1_6vrsj")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1470312359]
+texture = ExtResource("1_61klm")
+region_enabled = true
+region_rect = Rect2(0, 0, 8, 4)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=824212546]
+shape = SubResource("RectangleShape2D_lnu2h")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

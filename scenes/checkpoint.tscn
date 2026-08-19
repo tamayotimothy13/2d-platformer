@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://dihji23xxltkc"]
+
+[ext_resource type="Texture2D" uid="uid://xb8ipysq1330" path="res://assets/sprites/checkpoint.png" id="1_yyywg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_btfhh"]
+size = Vector2(430, 5)
+
+[node name="Area2D" type="StaticBody2D" unique_id=1121839867]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=346540610]
+texture = ExtResource("1_yyywg")
+region_enabled = true
+region_rect = Rect2(0, 0, 432, 5)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1231782823]
+shape = SubResource("RectangleShape2D_btfhh")
+one_way_collision = true
