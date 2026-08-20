@@ -757,7 +757,7 @@ position = Vector2(90, -3170)
 position = Vector2(0, -3233)
 
 [node name="checkpoint1" parent="Level 1/Checkpoint" unique_id=1563436436 instance=ExtResource("4_lbhrr")]
-position = Vector2(0, -2030)
+position = Vector2(0, -2020)
 
 [node name="checkpoint" parent="Level 1/Checkpoint" unique_id=1193599580 instance=ExtResource("4_lbhrr")]
 position = Vector2(0, -826)
