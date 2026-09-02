@@ -171,7 +171,7 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_btfhh"]
 radius = 4.0
 
-[node name="Player" type="CharacterBody2D" unique_id=1160744267]
+[node name="Player" type="CharacterBody2D" unique_id=1160744267 groups=["Player"]]
 z_index = 5
 platform_on_leave = 1
 script = ExtResource("1_g2els")
@@ -179,9 +179,8 @@ script = ExtResource("1_g2els")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=63855354]
 position = Vector2(0, -12)
 sprite_frames = SubResource("SpriteFrames_hk3e2")
-animation = &"run"
+animation = &"jump"
 autoplay = "idle"
-frame_progress = 0.4116548
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=170700452]
 position = Vector2(0, -4)

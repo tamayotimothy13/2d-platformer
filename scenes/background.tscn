@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://wqoowr2ds3q7"]
+
+[ext_resource type="Texture2D" uid="uid://dklxeygjwj1vv" path="res://assets/bg/Clouds 3/1.png" id="1_cbsqf"]
+[ext_resource type="Texture2D" uid="uid://dxi1r5fomhmst" path="res://assets/bg/Clouds 3/2.png" id="2_wisxt"]
+[ext_resource type="Texture2D" uid="uid://dr4w5s3xi8x83" path="res://assets/bg/Clouds 3/3.png" id="3_wax1t"]
+[ext_resource type="Texture2D" uid="uid://byj48gxwjor6l" path="res://assets/bg/Clouds 3/4.png" id="4_1tmhi"]
+
+[node name="CanvasLayer" type="CanvasLayer" unique_id=976153261]
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=994452183]
+z_index = -3
+offset_left = -139.99998
+offset_right = 436.0
+offset_bottom = 324.0
+scale = Vector2(1.6, 1.6)
+texture = ExtResource("1_cbsqf")
+
+[node name="TextureRect2" type="TextureRect" parent="." unique_id=358402037]
+offset_left = -140.0
+offset_right = 436.0
+offset_bottom = 324.0
+scale = Vector2(1.6, 1.6)
+texture = ExtResource("2_wisxt")
+
+[node name="TextureRect3" type="TextureRect" parent="." unique_id=515239971]
+z_index = -2
+offset_left = -140.0
+offset_right = 436.0
+offset_bottom = 324.0
+scale = Vector2(1.6, 1.6)
+texture = ExtResource("3_wax1t")
+
+[node name="TextureRect4" type="TextureRect" parent="." unique_id=1441206441]
+z_index = -1
+offset_left = -140.0
+offset_right = 436.0
+offset_bottom = 324.0
+scale = Vector2(1.6, 1.6)
+texture = ExtResource("4_1tmhi")
