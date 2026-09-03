@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://bu83i7rrcwahr"]
+
+[ext_resource type="Script" uid="uid://bkvj4c2etq1hw" path="res://scripts/start_menu.gd" id="1_ouf4f"]
+[ext_resource type="PackedScene" uid="uid://yicge48108e0" path="res://scenes/game.tscn" id="2_thu50"]
+[ext_resource type="Texture2D" uid="uid://dwtoucwjs7xyd" path="res://assets/title.png" id="3_m7x51"]
+
+[node name="StartMenu" type="Control" unique_id=1736884659]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_ouf4f")
+game_scene = ExtResource("2_thu50")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=98246425]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(0.443, 0.443)
+texture = ExtResource("3_m7x51")

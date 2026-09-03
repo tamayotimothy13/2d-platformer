@@ -18,7 +18,6 @@ var jump_hold_timer = 0.0
 var is_jumping = false
 var jump_buffer_time = 0.0
 
-
 func _physics_process(delta: float) -> void:
 
 	# Coyote time
@@ -59,8 +58,10 @@ func _physics_process(delta: float) -> void:
 
 	# Horizontal movement
 	var direction := Input.get_axis("move_left", "move_right")
-
-	if is_on_floor():
+	
+	if Input.is_action_pressed("emote"):
+		sprite.play("emote")
+	elif is_on_floor():
 		if direction == 0:
 			sprite.play("idle")
 		else:
