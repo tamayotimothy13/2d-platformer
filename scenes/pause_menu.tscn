@@ -1,0 +1,69 @@
+[gd_scene format=3 uid="uid://c5o8yxhwb2ut"]
+
+[ext_resource type="Script" uid="uid://dx7egi4vgo0uq" path="res://scripts/pause_menu.gd" id="1_n87rw"]
+
+[node name="PauseMenu" type="CanvasLayer" unique_id=259942387]
+script = ExtResource("1_n87rw")
+
+[node name="Control" type="Control" parent="." unique_id=680405583]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="darkOverlay" type="ColorRect" parent="Control" unique_id=972612725]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 600.0
+offset_bottom = 440.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.5019608)
+
+[node name="pauseLabel" type="Label" parent="Control" unique_id=1067058720]
+layout_mode = 0
+offset_left = 290.0
+offset_top = 225.0
+offset_right = 352.0
+offset_bottom = 248.0
+text = "PAUSED"
+
+[node name="quitButton" type="Button" parent="Control" unique_id=105138310]
+layout_mode = 0
+offset_left = 296.0
+offset_top = 270.0
+offset_right = 343.0
+offset_bottom = 301.0
+text = "Quit"
+
+[node name="quitConfirm" type="Label" parent="Control" unique_id=391916242]
+layout_mode = 0
+offset_left = 210.0
+offset_top = 190.0
+offset_right = 446.0
+offset_bottom = 213.0
+text = "Are you sure you want to quit?"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="yes" type="Button" parent="Control/quitConfirm" unique_id=1438407784]
+layout_mode = 0
+offset_left = 45.0
+offset_top = 80.0
+offset_right = 80.0
+offset_bottom = 111.0
+text = "Yes"
+
+[node name="no" type="Button" parent="Control/quitConfirm" unique_id=1922343997]
+layout_mode = 0
+offset_left = 139.0
+offset_top = 80.0
+offset_right = 170.0
+offset_bottom = 111.0
+text = "No"
+
+[connection signal="pressed" from="Control/quitButton" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Control/quitConfirm/yes" to="." method="_on_yes_pressed"]
+[connection signal="pressed" from="Control/quitConfirm/no" to="." method="_on_no_pressed"]

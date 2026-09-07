@@ -2,7 +2,30 @@
 
 [ext_resource type="Script" uid="uid://bkvj4c2etq1hw" path="res://scripts/start_menu.gd" id="1_ouf4f"]
 [ext_resource type="PackedScene" uid="uid://yicge48108e0" path="res://scenes/game.tscn" id="2_thu50"]
-[ext_resource type="Texture2D" uid="uid://dwtoucwjs7xyd" path="res://assets/title.png" id="3_m7x51"]
+[ext_resource type="Texture2D" uid="uid://b7onmbwk2n0wr" path="res://assets/sprites/pressstart.png" id="3_h61rw"]
+[ext_resource type="Texture2D" uid="uid://bwjcsfsle6wwp" path="res://assets/titlebg.png" id="4_fcv5n"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4v6gu"]
+atlas = ExtResource("3_h61rw")
+region = Rect2(0, 0, 113, 7)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fcv5n"]
+atlas = ExtResource("3_h61rw")
+region = Rect2(0, 8, 113, 7)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_btfhh"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4v6gu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fcv5n")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 2.0
+}]
 
 [node name="StartMenu" type="Control" unique_id=1736884659]
 layout_mode = 3
@@ -12,9 +35,17 @@ offset_bottom = 40.0
 script = ExtResource("1_ouf4f")
 game_scene = ExtResource("2_thu50")
 
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1581053666]
+z_index = 1
+position = Vector2(324, 400)
+scale = Vector2(1.5, 1.5)
+sprite_frames = SubResource("SpriteFrames_btfhh")
+autoplay = "default"
+frame_progress = 0.6186799
+
 [node name="TextureRect" type="TextureRect" parent="." unique_id=98246425]
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 scale = Vector2(0.443, 0.443)
-texture = ExtResource("3_m7x51")
+texture = ExtResource("4_fcv5n")

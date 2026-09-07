@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://c8j40p6x1kf80" path="res://scenes/spring.tscn" id="5_iywne"]
 [ext_resource type="PackedScene" uid="uid://wqoowr2ds3q7" path="res://scenes/background.tscn" id="6_p57ef"]
 [ext_resource type="PackedScene" uid="uid://1ty4js2x5bni" path="res://scenes/orb.tscn" id="7_u5sy4"]
+[ext_resource type="PackedScene" uid="uid://c5o8yxhwb2ut" path="res://scenes/pause_menu.tscn" id="9_0tnpc"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lnu2h"]
 texture = ExtResource("2_yqjtg")
@@ -814,3 +815,6 @@ offset_bottom = -3246.0
 scale = Vector2(0.2, 0.2)
 text = "Thanks for playing!
 (Press R to restart)"
+
+[node name="PauseMenu" parent="." unique_id=259942387 instance=ExtResource("9_0tnpc")]
+process_mode = 3
