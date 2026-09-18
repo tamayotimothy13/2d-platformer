@@ -10,7 +10,6 @@ func _ready() -> void:
 
 func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("pause"):
-		print("ESC PRESSED")
 		toggle_pause()
 
 func toggle_pause() -> void:
